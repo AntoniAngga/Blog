@@ -1,3 +1,5 @@
+<%= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
+
 <div>
   <h1>
     <%=@blog_post.title%>
@@ -6,5 +8,3 @@
     <%=@blog_post.body%>
   </p>
 </div>
-
-<%= button_to "Edit", edit_blog_post_path(@blog_post.id), method: :get%>
